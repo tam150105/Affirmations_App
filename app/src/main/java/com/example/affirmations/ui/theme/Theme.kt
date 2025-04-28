@@ -39,7 +39,12 @@ private val DarkColorScheme = darkColorScheme(
 private val LightColorScheme = lightColorScheme(
     surfaceVariant = md_theme_light_surfaceVariant,
     onSurfaceVariant = md_theme_light_onSurfaceVariant,
-    background = md_theme_light_background
+  //  background = md_theme_light_background,
+    primary = PositiveGreen,
+    onPrimary = CalmWhite,
+    background = CalmWhite,
+    surface = NeutralGray,
+    onSurface = CalmWhite
 )
 
 @Composable

@@ -32,11 +32,11 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.affirmations.data.Datasource
 import com.example.affirmations.model.Affirmation
@@ -48,7 +48,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AffirmationsTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -60,29 +59,19 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
+
 @Composable
 fun AffirmationsApp() {
-    AffirmationList(
-        affirmationList = Datasource().loadAffirmations(),
-    )
+        AffirmationList(
+            affirmationList = Datasource().loadAffirmations(),
+        )
 }
 
 @Composable
-fun AffirmationList(affirmationList: List<Affirmation>, modifier: Modifier = Modifier) {
-    LazyColumn(modifier = modifier) {
-        items(affirmationList) { affirmation ->
-            AffirmationCard(
-                affirmation = affirmation,
-                modifier = Modifier.padding(8.dp)
-            )
-        }
-    }
-}
-
-@Composable
-fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
-    Card(modifier = modifier) {
-        Column {
+fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier){
+    Card(modifier = modifier){
+        Column{
             Image(
                 painter = painterResource(affirmation.imageResourceId),
                 contentDescription = stringResource(affirmation.stringResourceId),
@@ -94,14 +83,25 @@ fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
             Text(
                 text = LocalContext.current.getString(affirmation.stringResourceId),
                 modifier = Modifier.padding(16.dp),
-                style = MaterialTheme.typography.headlineSmall
+                style = MaterialTheme.typography.headlineSmall.copy(
+                    color = Color(0xFF2196F3), // Xanh dương tươi sáng
+                    fontWeight = androidx.compose.ui.text.font.FontWeight.Bold
+                )
             )
         }
     }
+
 }
 
-@Preview
 @Composable
-private fun AffirmationCardPreview() {
-    AffirmationCard(Affirmation(R.string.affirmation1, R.drawable.image1))
+fun AffirmationList(affirmationList: List<Affirmation>, modifier: Modifier = Modifier){
+    LazyColumn(modifier = modifier){
+        items(affirmationList) { affirmation ->
+            AffirmationCard(
+                affirmation = affirmation,
+                modifier = Modifier.padding(8.dp)
+            )
+
+        }
+    }
 }

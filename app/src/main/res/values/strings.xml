@@ -14,15 +14,16 @@
   ~ limitations under the License.
   -->
 <resources>
-    <string name="app_name">Affirmations</string>
-    <string name="affirmation1">I am strong.</string>
-    <string name="affirmation2">I believe in myself.</string>
-    <string name="affirmation3">Each day is a new opportunity to grow and be a better version of myself.</string>
-    <string name="affirmation4">Every challenge in my life is an opportunity to learn from.</string>
-    <string name="affirmation5">I have so much to be grateful for.</string>
-    <string name="affirmation6">Good things are always coming into my life.</string>
-    <string name="affirmation7">New opportunities await me at every turn.</string>
-    <string name="affirmation8">I have the courage to follow my heart.</string>
-    <string name="affirmation9">Things will unfold at precisely the right time.</string>
-    <string name="affirmation10">I will be present in all the moments that this day brings.</string>
+    <string name="app_name">Khẳng Định Tích Cực</string>
+    <string name="affirmation1">Tôi tràn đầy năng lượng và sức sống.</string>
+    <string name="affirmation2">Tôi xứng đáng với những điều tốt đẹp nhất.</string>
+    <string name="affirmation3">Tôi chấp nhận bản thân và yêu thương chính mình.</string>
+    <string name="affirmation4">Mỗi ngày là một món quà để tôi khám phá.</string>
+    <string name="affirmation5">Tôi luôn sẵn sàng học hỏi và phát triển.</string>
+    <string name="affirmation6">Tôi thu hút những cơ hội tốt đến với mình.</string>
+    <string name="affirmation7">Tôi sẽ tạo ra những kỷ niệm đẹp hôm nay.</string>
+    <string name="affirmation8">Tôi làm chủ suy nghĩ và cảm xúc của mình.</string>
+    <string name="affirmation9">Tôi tìm thấy sự bình yên trong hiện tại.</string>
+    <string name="affirmation10">Tôi biết ơn cuộc sống với tất cả những gì tôi có.</string>
 </resources>
+
